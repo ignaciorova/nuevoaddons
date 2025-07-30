@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_out_sale_tree_inherit" model="ir.ui.view">
+            <field name="name">sale.order.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <xpath expr="//list" position="attributes">
+                    <attribute name="js_class">ocr_button_sale</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_ocr_ai_sale_inherit" model="ir.ui.view">
+            <field name="name">sale.order.sale</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[@name='customer_signature']" position="after">
+                    <page string="OCR Details" invisible="not is_created_ocr">
+                        <group>
+                            <field name="is_created_ocr"/>
+                            <field name="ocr_response_text" string="Responded Data"/>
+                            <field name="ocr_attachment_id" string="Uploaded File"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//group//group[1]" position="inside">
+                    <field name="is_created_ocr" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

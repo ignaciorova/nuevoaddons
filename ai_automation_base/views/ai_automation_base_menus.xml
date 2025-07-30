@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- Main AI Automation Menu -->
+        <menuitem id="menu_ai_automation_root"
+                  name="AI Automation"
+                  parent="base.menu_administration"
+                  sequence="100"
+                  groups="ai_automation_base.group_ai_user"/>
+        
+        <!-- Dashboard Menu -->
+        <menuitem id="menu_ai_automation_dashboard"
+                  name="Dashboard"
+                  parent="menu_ai_automation_root"
+                  sequence="1"/>
+        
+        <!-- Configuration Menu -->
+        <menuitem id="menu_ai_automation_configuration"
+                  name="Configuration"
+                  parent="menu_ai_automation_root"
+                  sequence="50"
+                  groups="ai_automation_base.group_ai_manager"/>
+        
+        <!-- Monitoring Menu -->
+        <menuitem id="menu_ai_automation_monitoring"
+                  name="Monitoring"
+                  parent="menu_ai_automation_root"
+                  sequence="60"
+                  groups="ai_automation_base.group_ai_manager"/>
+        
+        <!-- Security Menu -->
+        <menuitem id="menu_ai_automation_security"
+                  name="Security"
+                  parent="menu_ai_automation_root"
+                  sequence="70"
+                  groups="ai_automation_base.group_ai_admin"/>
+        
+    </data>
+</odoo> 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!--PAYMENT PROVIDER TILOPAY-->
+    <record id="payment_tilopay.payment_provider_tilopay" model="payment.provider">
+        <field name="name">Tilopay Payment Gateway</field>
+        <field name="code">tilopay</field>
+        <field name="inline_form_view_id" ref="inline_form"/>
+        <field name="image_128" type="base64" file="payment_tilopay/static/img/TiloPayIcon.png"/>
+        <field name="allow_tokenization">False</field>
+        <field name="payment_method_ids"
+               eval="[Command.set([
+                         ref('payment_tilopay.payment_method_tilopay'),
+                     ])]"
+        />
+    </record>
+</odoo>

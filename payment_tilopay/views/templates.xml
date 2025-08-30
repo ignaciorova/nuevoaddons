@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="address" inherit_id="website_sale.address" name="Address Management">
+        <div id="div_name" position="before">
+            <div class="col-lg-6 mb-2" id="first_name">
+                <label class="col-form-label" for="first_name">First Name</label>
+                <input type="text" name="first_name" class="form-control" t-att-value="partner_sudo.first_name"/>
+            </div>
+            <div class="col-lg-6 mb-2" id="last_name">
+                <label class="col-form-label" for="last_name">Last Name</label>
+                <input type="text" name="last_name" class="form-control" t-att-value="partner_sudo.last_name"/>
+            </div>
+            <div class="col-lg-6 mb-2" id="surname">
+                <label class="col-form-label" for="surname">Surname</label>
+                <input type="text" name="surname" class="form-control" t-att-value="partner_sudo.surname"/>
+            </div>
+        </div>
+        <div id="div_name" position="attributes">
+            <attribute name="style">display:none !important;</attribute>
+        </div>
+        <input name="name" position="replace">
+            <input type="text" name="name" class="form-control" value="*" />
+        </input>
+    </template>
+</odoo>

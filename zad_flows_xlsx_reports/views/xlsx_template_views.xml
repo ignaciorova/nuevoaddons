@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_zad_xlsx_template_form" model="ir.ui.view">
+        <field name="name">zad.xlsx.template.form</field>
+        <field name="model">zad.xlsx.template</field>
+        <field name="arch" type="xml">
+            <form string="XLSX Template">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="model_id"/>
+                        <field name="template_filename" readonly="1"/>
+                        <field name="template_file" filename="template_filename"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="note" colspan="4"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_zad_xlsx_template_tree" model="ir.ui.view">
+        <field name="name">zad.xlsx.template.tree</field>
+        <field name="model">zad.xlsx.template</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="model_id"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_zad_xlsx_template" model="ir.actions.act_window">
+        <field name="name">XLSX Templates</field>
+        <field name="res_model">zad.xlsx.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_zad_root" name="Zad Flows"/>
+    <menuitem id="menu_zad_reports" name="XLSX Reports" parent="menu_zad_root"/>
+    <menuitem id="menu_zad_xlsx_templates" name="Templates" parent="menu_zad_reports" action="action_zad_xlsx_template"/>
+</odoo>

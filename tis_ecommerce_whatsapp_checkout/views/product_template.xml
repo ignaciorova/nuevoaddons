@@ -1,9 +1,0 @@
-<odoo>
-    <template id="product_whatsapp_inquiry" inherit_id="website_sale.product" name="WhatsApp Inquiry Button">
-        <xpath expr="//div[@class='product_price']" position="after">
-            <a t-att-href="'/whatsapp/inquiry/%s' % product.id" class="btn whatsapp-btn">
-                <i class="fa fa-whatsapp me-2"></i>Inquire via WhatsApp
-            </a>
-        </xpath>
-    </template>
-</odoo>

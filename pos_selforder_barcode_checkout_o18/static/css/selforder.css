@@ -1,0 +1,7 @@
+.o-selforder-scan.card, .o-selforder-delivery.card { border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+.o-selforder-title { font-size: 1.1rem; margin-bottom: .25rem; }
+.o-selforder-subtitle { color: #6b7280; margin-bottom: .75rem; }
+.o-selforder-video-wrap { position: relative; width: 100%; border-radius: 12px; overflow: hidden; background: #000; }
+#so-scan-video { width: 100%; height: auto; display: block; }
+.o-selforder-scan-actions { display: flex; gap: .5rem; margin-bottom: .75rem; flex-wrap: wrap; }
+#so-scan-result, #so-delivery-result { min-height: 1.5rem; }
